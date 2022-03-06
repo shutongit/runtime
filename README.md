@@ -15,13 +15,22 @@ iOS运行时
     - 不为nil， 从receiverClass的cache中查找方法
         - 找到方法，调用方法结束查找
         - 没找到， 从receiverClass的class_rw_t中查找方法
-            - 找到方法，<调用方法，结束查找并将方法缓存到receiverClass的cache中>
-            - 没找到，从superClass的cache中查找方法 <调用方法，结束查找并将方法缓存到receiverClass的cache中>
+            - 找到方法，**调用方法，结束查找并将方法缓存到receiverClass的cache中**
+            - 没找到，从superClass的cache中查找方法 **调用方法，结束查找并将方法缓存到receiverClass的cache中**
                 - 没找到，从superClass的class_rw_t中查找方法
-                    - 找到方法，<调用方法，结束查找并将方法缓存到receiverClass的cache中>
+                    - 找到方法，**调用方法，结束查找并将方法缓存到receiverClass的cache中**
                     - 没找到，判断上层是否还有superClass
                         - 有，继续从superClass的cache中查找方法开始执行
                         - 没有，动态方法解析
+                        
+>   receiver通过isa指针找到receiverClass
+    receiverClass通过superclass指针找到superClass
+>>  如果是从class_rw_t中查找方法
+    已经排序的，二分查找
+    没有排序的，遍历查找
+
+
+
 ### 1.2 动态方法解析
 - 判断是否曾经有动态解析
     - 是 消息转发
@@ -39,4 +48,7 @@ iOS运行时
 > 开发者可以在forwardInvocation:方法中自定义任何逻辑
 以上方法都有对象方法、类方法2个版本（前面可以是加号+，也可以是减号-）
 
+
+
+## 2 runtime在项目中的使用
 
