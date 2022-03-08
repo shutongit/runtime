@@ -1,6 +1,52 @@
 # runtime
 iOS运行时
 
+## Class的结构
+### 基础结构
+```
+    struct objc_class {
+        Class isa;
+        Class superclass;
+        cache_t cache; //方法缓存
+        class_data_bits_t bits; //用户获取具体的类信息 换位与掩码 (& FAST_DATA_MASK)之后获取
+    }
+
+```
+###  `class_data_bits_t` & FAST_DATA_MASK 获取到 `class_rw_t`的结构
+```
+    struct class_rw_t {
+        uint32_t flags;
+        uint32_t version;
+        const class_ro_t *ro;
+        method_list_t * methods;    // 方法列表
+        property_list_t *properties;    // 属性列表
+        const protocol_list_t * protocols;  // 协议列表
+        Class firstSubclass;
+        Class nextSiblingClass;
+        char *demangledName;
+    };
+```
+ ### `const class_ro_t *ro;`的结构
+ ```
+     struct class_ro_t {
+        uint32_t flags;
+        uint32_t instanceStart;
+        uint32_t instanceSize;  // instance对象占用的内存空间
+    #ifdef __LP64__
+        uint32_t reserved;
+    #endif
+        const uint8_t * ivarLayout;
+        const char * name;  // 类名
+        method_list_t * baseMethodList;
+        protocol_list_t * baseProtocols;
+        const ivar_list_t * ivars;  // 成员变量列表
+        const uint8_t * weakIvarLayout;
+        property_list_t *baseProperties;
+    };
+ 
+ ```
+ 
+ 
 
 ## 1 OC 的消息机制
   - OC中的方法调用其实都是转成了objc_msgSend函数的调用，给receiver（方法调用者）发送了一条消息（selector方法名）
