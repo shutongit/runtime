@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5070324727D83BB900246A54 /* UITextView+placeHold.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070324627D83BB900246A54 /* UITextView+placeHold.m */; };
+		5070324D27D8475800246A54 /* STViewController09.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070324C27D8475800246A54 /* STViewController09.m */; };
+		5070325127D849DF00246A54 /* UIControl+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070325027D849DF00246A54 /* UIControl+Category.m */; };
+		5070325427D84C9E00246A54 /* NSMutableDictionary+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070325327D84C9E00246A54 /* NSMutableDictionary+Category.m */; };
 		50EED11127D7063B00428F89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EED11027D7063B00428F89 /* AppDelegate.m */; };
 		50EED11427D7063B00428F89 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EED11327D7063B00428F89 /* SceneDelegate.m */; };
 		50EED11727D7063B00428F89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EED11627D7063B00428F89 /* ViewController.m */; };
@@ -31,6 +35,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5070324527D83BB900246A54 /* UITextView+placeHold.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+placeHold.h"; sourceTree = "<group>"; };
+		5070324627D83BB900246A54 /* UITextView+placeHold.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+placeHold.m"; sourceTree = "<group>"; };
+		5070324B27D8475800246A54 /* STViewController09.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController09.h; sourceTree = "<group>"; };
+		5070324C27D8475800246A54 /* STViewController09.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController09.m; sourceTree = "<group>"; };
+		5070324F27D849DF00246A54 /* UIControl+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Category.h"; sourceTree = "<group>"; };
+		5070325027D849DF00246A54 /* UIControl+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Category.m"; sourceTree = "<group>"; };
+		5070325227D84C9E00246A54 /* NSMutableDictionary+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Category.h"; sourceTree = "<group>"; };
+		5070325327D84C9E00246A54 /* NSMutableDictionary+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Category.m"; sourceTree = "<group>"; };
 		50EED10C27D7063B00428F89 /* runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EED10F27D7063B00428F89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50EED11027D7063B00428F89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5070324427D83B8800246A54 /* runtime-textView-placeHold */ = {
+			isa = PBXGroup;
+			children = (
+				5070324527D83BB900246A54 /* UITextView+placeHold.h */,
+				5070324627D83BB900246A54 /* UITextView+placeHold.m */,
+			);
+			path = "runtime-textView-placeHold";
+			sourceTree = "<group>";
+		};
 		50EED10327D7063B00428F89 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +135,7 @@
 				50EED12827D709B800428F89 /* ExampleDemo.h */,
 				50EED12927D709B800428F89 /* ExampleDemo.m */,
 				50EED13127D71E8000428F89 /* Example */,
+				5070324427D83B8800246A54 /* runtime-textView-placeHold */,
 				50EED11827D7063B00428F89 /* Main.storyboard */,
 				50EED11B27D7063E00428F89 /* Assets.xcassets */,
 				50EED11D27D7063E00428F89 /* LaunchScreen.storyboard */,
@@ -150,6 +172,12 @@
 				50EED17B27D74F4600428F89 /* STCar08.m */,
 				50EED18027D74F9400428F89 /* NSObject+Json.h */,
 				50EED18127D74F9400428F89 /* NSObject+Json.m */,
+				5070324B27D8475800246A54 /* STViewController09.h */,
+				5070324C27D8475800246A54 /* STViewController09.m */,
+				5070324F27D849DF00246A54 /* UIControl+Category.h */,
+				5070325027D849DF00246A54 /* UIControl+Category.m */,
+				5070325227D84C9E00246A54 /* NSMutableDictionary+Category.h */,
+				5070325327D84C9E00246A54 /* NSMutableDictionary+Category.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -224,11 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5070325127D849DF00246A54 /* UIControl+Category.m in Sources */,
 				50EED13427D7207C00428F89 /* STPerson03.m in Sources */,
 				50EED13027D71DE100428F89 /* STPerson02.m in Sources */,
 				50EED11727D7063B00428F89 /* ViewController.m in Sources */,
 				50EED11127D7063B00428F89 /* AppDelegate.m in Sources */,
+				5070325427D84C9E00246A54 /* NSMutableDictionary+Category.m in Sources */,
 				50EED17F27D74F5700428F89 /* STStudent.m in Sources */,
+				5070324727D83BB900246A54 /* UITextView+placeHold.m in Sources */,
 				50EED16D27D738A000428F89 /* STPerson05.m in Sources */,
 				50EED12A27D709B800428F89 /* ExampleDemo.m in Sources */,
 				50EED12227D7063E00428F89 /* main.mm in Sources */,
@@ -236,6 +267,7 @@
 				50EED18527D7591300428F89 /* STViewController.m in Sources */,
 				50EED16A27D733FA00428F89 /* STPerson04.m in Sources */,
 				50EED17C27D74F4600428F89 /* STCar08.m in Sources */,
+				5070324D27D8475800246A54 /* STViewController09.m in Sources */,
 				50EED17627D749CB00428F89 /* STPerson07.m in Sources */,
 				50EED17327D73F0600428F89 /* STCat06.m in Sources */,
 				50EED18227D74F9400428F89 /* NSObject+Json.m in Sources */,

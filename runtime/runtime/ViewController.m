@@ -9,6 +9,7 @@
 #import "ExampleDemo.h"
 #import "STPerson07.h"
 #import "STViewController.h"
+#import "STViewController09.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -124,6 +125,12 @@ static NSString *key1 = @"name", *key2 = @"description", *key3 = @"index", *titl
             [self presentViewController:vc animated:YES completion:nil];
         }
             break;
+        case 11:
+        {
+            STViewController09 *vc = [[STViewController09 alloc]init];
+            vc.modalPresentationStyle = UIModalPresentationCurrentContext;
+            [self presentViewController:vc animated:YES completion:nil];
+        }
             
         default:
             break;
@@ -153,6 +160,7 @@ static NSString *key1 = @"name", *key2 = @"description", *key3 = @"index", *titl
             @{key1:@"数据转model",key2:@"",key3:@8},
             @{key1:@"使用runtime创建类",key2:@"",key3:@9},
             @{key1:@"修改textFiled的placeHold样式",key2:@"",key3:@10},
+            @{key1:@"runtime方法替换",key2:@"",key3:@11},
         ]},
         
     ]];
